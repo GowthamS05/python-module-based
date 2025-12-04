@@ -1,0 +1,20 @@
+[project]
+name = "subtraction-module"
+version = "0.1.0"
+description = "Subtraction module for FastAPI with shared environment support"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"child_library" = "."}
+
+[tool.setuptools.package-data]
+child_library = ["**/*.py"]
